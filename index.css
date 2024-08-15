@@ -1,0 +1,209 @@
+.f-www-button {
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    line-height: var(--btn-line-height);
+    position: relative;
+    display: flex;
+    width: fit-content;
+    padding-top: var(--btn-padding-y);
+    padding-right: var(--btn-padding-x);
+    padding-bottom: var(--btn-padding-y);
+    padding-left: var(--btn-padding-x);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), outline var(--transition-base);
+    text-align: center;
+    letter-spacing: inherit;
+    text-transform: none;
+    color: var(--color-action-primary-inverted);
+    border-radius: var(--btn-border-radius);
+    outline: rgb(99, 153, 255, 0) solid 2px;
+    outline-offset: 2px;
+    background-color: var(--color-action-primary-default);
+    box-shadow: 0 2px 11px -1.5px rgba(0, 0, 0, .19);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.f-www-button:focus,
+.f-www-button:focus-visible,
+.f-www-button:hover {
+    text-decoration: none;
+    outline: var(--color-brand-primary-lighten-2) solid 2px;
+    background-color: var(--color-action-primary-hover);
+    box-shadow: none;
+}
+
+.f-www-button:active {
+    background-color: var(--color-action-primary-active);
+}
+
+/*––– Text –––*/
+.f-www-button .www-button-text {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.75) 100%);
+    background-size: 100% 200%;
+    background-position-y: 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-base);
+}
+.f-www-button:hover .www-button-text {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.75) 100%);
+    background-size: 100% 200%;
+    background-position-y: 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.f-www-button:active .www-button-text {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.75) 100%);
+    background-size: 100% 200%;
+    background-position-y: 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+
+/*––– Shadows –––*/
+.f-www-button::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: overlay;
+    box-shadow: 0px 12px 12px -3.5px rgba(255, 255, 255, 0.65) inset, 0px 3px 4px 0.5px rgba(255, 255, 255, 0.17) inset;
+    border-radius: var(--border-radius);
+    transition: box-shadow var(--transition-base);
+	  pointer-events: none;
+}
+.f-www-button:hover::before,
+.f-www-button:focus::before,
+.f-www-button:focus-visible::before, {
+	box-shadow: 0px 12px 9px -3.5px rgba(255, 255, 255, 0.65) inset, 0px 3px 3px 0.5px rgba(255, 255, 255, 0.17) inset;
+}
+.f-www-button:active::before {
+    box-shadow: 0px 12px 19px -4.5px rgba(0, 0, 0, 0.24) inset, 0px 3px 2px 0.5px rgba(0, 0, 0, 0.17) inset;
+}
+.f-www-button.large::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: soft-light;
+    box-shadow: 0px -9px 8px -3.5px rgba(0, 0, 0, 0.60) inset, 0px -2px 3px 0.5px rgba(0, 0, 0, 0.18) inset;
+    border-radius: var(--border-radius);
+    transition: box-shadow var(--transition-base);
+	  pointer-events: none;
+}
+.f-www-button:hover::after,
+.f-www-button:focus::after,
+.f-www-button:focus-visible::after {
+	box-shadow: 0px -9px 5px -3.5px rgba(0, 0, 0, 0.60) inset, 0px -2px 2px 0.5px rgba(0, 0, 0, 0.18) inset;
+}
+.f-www-button:active::after {
+    box-shadow: 0px -9px 7px -3.5px rgba(0, 0, 0, 0.30) inset, 0px -1px 3px 0.5px rgba(255, 255, 255, 0.30) inset;
+}
+
+/*––– Sizes –––*/
+
+.f-www-button.small {
+    font-size: var(--btn-sm-font-size);
+    line-height: var(--btn-sm-line-height);
+    padding-top: var(--btn-sm-padding-y);
+    padding-right: var(--btn-sm-padding-x);
+    padding-bottom: var(--btn-sm-padding-y);
+    padding-left: var(--btn-sm-padding-x);
+    border-radius: var(--btn-sm-border-radius);
+}
+
+.f-www-button.large {
+    font-size: var(--btn-lg-font-size);
+    line-height: var(--btn-lg-line-height);
+    padding-top: var(--btn-lg-padding-y);
+    padding-right: var(--btn-lg-padding-x);
+    padding-bottom: var(--btn-lg-padding-y);
+    padding-left: var(--btn-lg-padding-x);
+    border-radius: var(--btn-lg-border-radius);
+}
+
+/*––– Inverted –––*/
+
+.f-www-button.inverted {
+    color: var(--color-action-primary-hover);
+	background-color: #D4E2FF;
+	box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.35);
+}
+
+.f-www-button:focus-visible.inverted,
+.f-www-button:focus.inverted,
+.f-www-button:hover.inverted {
+    color: var(--color-action-primary-hover);
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.35);
+}
+.f-www-button.inverted::before {
+    mix-blend-mode: normal;
+    box-shadow: 0px 9px 7px -3.5px rgba(255, 255, 255, 0.75) inset, 0px 3px 3px 0.5px rgba(255, 255, 255, 0.40) inset;
+}
+.f-www-button:hover.inverted::before,
+.f-www-button:focus.inverted::before,
+.f-www-button:focus-visible.inverted::before   {
+    box-shadow: 0px 9px 7px -3.5px rgba(255, 255, 255, 0.75) inset, 0px 3px 3px 0.5px rgba(255, 255, 255, 0.40) inset;
+}
+.f-www-button.inverted .www-button-text {
+    background: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+.f-www-button:active.inverted::before {
+    box-shadow: 0px 8px 7px -3.5px rgba(1, 34, 97, 0.40) inset, 0px 3px 5px 0.5px rgba(1, 34, 97, 0.20) inset;
+}
+.f-www-button.inverted::after {
+    mix-blend-mode: normal;
+    box-shadow: 0px -7px 8px -3.5px rgba(1, 34, 97, 0.30) inset, 0px -2px 2px 0.5px rgba(1, 34, 97, 0.08) inset;
+}
+.f-www-button:hover.inverted::after,
+.f-www-button:focus.inverted::after,
+.f-www-button:focus-visible.inverted::after {
+    box-shadow: 0px -7px 8px -3.5px rgba(1, 34, 97, 0.30) inset, 0px -2px 2px 0.5px rgba(1, 34, 97, 0.08) inset;
+}
+.f-www-button:active.inverted::after {
+    box-shadow: 0px -7px 13px -3.5px rgba(1, 34, 97, 0.37) inset, 0px -2px 2px 0.5px rgba(1, 34, 97, 0.08) inset;
+}
+
+/*––– Icons –––*/
+
+.f-www-button .button-arrow-right {
+    transition: transform var(--transition-base);
+}
+
+.f-www-button:active .button-arrow-right,
+.f-www-button:focus .button-arrow-right,
+.f-www-button:focus-visible .button-arrow-right,
+.f-www-button:hover .button-arrow-right {
+    transform: translatex(4px);
+}
+
+.button-icon-left,
+.button-icon-right {
+    width: 16px;
+    min-width: 16px !important;
+    height: 16px;
+    transition: color .15s ease-in-out;
+}
+
+.button-icon-left svg,
+.button-icon-right svg {
+    vertical-align: top;
+}

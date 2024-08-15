@@ -1,8 +1,14 @@
 [#assign iconLeft = configuration.iconLeft /]
 [#assign iconRight = configuration.iconRight /]
+[#assign propagateUrlParameters = configuration.propagateUrlParameters /]
 [#assign url = configuration.url /]
 
-<a href="${url}" class="f-www-button ${configuration.inverted?then('inverted', '')} ${configuration.size}" rel="noopener noreferrer" target="${configuration.newTab?then('_blank', '_self')}">
+<a
+	class="f-www-button ${configuration.inverted?then('inverted', '')} ${configuration.size}"
+	href="${url}"
+	rel="noopener noreferrer"
+	target="${configuration.newTab?then('_blank', '_self')}" 
+>
 	[#if iconLeft]
 		<div class="button-icon-left" data-lfr-editable-type="html" data-lfr-editable-id="button-icon-left">
 		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

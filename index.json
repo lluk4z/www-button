@@ -3,7 +3,7 @@
 		{
 			"fields": [
 				{
-                    "dataType": "string",
+					"dataType": "string",
                     "defaultValue": "large",
                     "label": "Size",
                     "name": "size",
@@ -54,6 +54,13 @@
 					"localizable": true,
 					"name": "url",
 					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": false,
+					"label": "Propagate URL Parameters",
+					"name": "propagateUrlParameters",
+					"type": "checkbox"
 				},
 				{
 					"dataType": "string",
